@@ -11,11 +11,13 @@ with open('secret.json') as json_file:
     consumer_token = data['consumer_token']
     access_token = data['access_token']
     access_token_secret = data['access_token_secret']
+    discord_webhook_1 = data['discord_webhook_1']
+    discord_webhook_2 = data['discord_webhook_2']
     json_file.close()
 # Authenticate to Twitter
 auth = tweepy.OAuthHandler(consumer_key, consumer_token)
 auth.set_access_token(access_token, access_token_secret)
-webhook = Webhook.partial('646375736755879967', '2L4xUyWpeNPqAjinlu6NLqDW77hH6dofOsVItHWRXEUlLIhasUzIhq8hiRi_l-kyS2nQ',\
+webhook = Webhook.partial(discord_webhook_1,discord_webhook_2,\
  adapter=RequestsWebhookAdapter())
 
 # Create API object
@@ -35,4 +37,5 @@ class MyStreamListener(tweepy.StreamListener):
 
 myStreamListener = MyStreamListener()
 myStream = tweepy.Stream(auth = api.auth, listener=myStreamListener)
+# edit with the twitter IDs as needed
 myStream.filter(follow=["2381285430","897873334632841217"],is_async=True)
