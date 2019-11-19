@@ -3,6 +3,7 @@ import json
 import requests
 import discord
 from discord import Webhook, RequestsWebhookAdapter, File
+import SMS
 
 with open('secret.json') as json_file:
     data = json.load(json_file)
@@ -24,6 +25,7 @@ class MyStreamListener(tweepy.StreamListener):
 
     def on_status(self, status):
         webhook.send(status.text)
+        SMS.send(status.text)
         print(status.text)
 
     def on_error(self, status_code):

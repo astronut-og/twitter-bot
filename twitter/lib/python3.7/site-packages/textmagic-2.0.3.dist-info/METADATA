@@ -1,0 +1,31 @@
+Metadata-Version: 2.0
+Name: textmagic
+Version: 2.0.3
+Summary: TextMagic APIv2 client
+Home-page: https://github.com/textmagic/textmagic-rest-python
+Author: Textmagic
+Author-email: support@textmagic.com
+License: UNKNOWN
+Keywords: textmagic
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Communications :: Telephony
+Requires-Dist: httplib2
+Requires-Dist: six
+
+UNKNOWN
+
+
